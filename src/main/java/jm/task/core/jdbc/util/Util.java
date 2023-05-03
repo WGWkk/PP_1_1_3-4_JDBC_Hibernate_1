@@ -42,7 +42,7 @@ public class Util {
             property.put(Environment.USER, USER);
             property.put(Environment.PASS, PASSWORD);
             property.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
-            property.put(Environment.SHOW_SQL, "False");
+            property.put(Environment.SHOW_SQL, "True");
             property.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             property.put(Environment.HBM2DDL_AUTO, "create-drop");
             configuration.setProperties(property);
