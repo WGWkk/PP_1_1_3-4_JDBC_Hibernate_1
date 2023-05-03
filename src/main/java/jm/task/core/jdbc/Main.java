@@ -13,15 +13,17 @@ public class Main {
     private final static UserService userService = new UserServiceImpl();
 
     public static void main(String[] args) {
-        final UserService userService = new UserServiceImpl();
-        userService.createUsersTable();
 
+
+        userService.createUsersTable();
         userService.saveUser("Nikita", "Konovalov", (byte) 25);
         userService.saveUser("Sergey", "Konovalov", (byte) 18);
         userService.saveUser("Andrey", "Konovalov", (byte) 53);
         userService.saveUser("Valentina", "Konovalova", (byte) 49);
+        userService.removeUserById(2);
         System.out.println(userService.getAllUsers());
         userService.cleanUsersTable();
+        System.out.println(userService.getAllUsers());
         userService.dropUsersTable();
     }
 }
